@@ -1,0 +1,53 @@
+:root {
+    /* font-family: sans-serif; */
+    --font-color: pink;
+}
+
+@media (max-width: 550px) {
+    :root {
+        --font-color: black;
+    }
+}
+
+h1 {
+    color: hotpink !important;
+    font-family: 'Lobster', cursive;
+}
+
+.goldText {
+    color: gold;
+}
+
+p {
+    font-size: 18px;
+}
+
+.wider-image {
+    width: 700px;
+    /* height: 125px; */
+}
+
+.pink-border {
+    border-color: hotpink;
+    border-style: solid;
+    border-width: 3px;
+    border-radius: 10px;
+}
+
+.aliceblueBG {
+    background-color: aliceblue;
+    padding: 10px;
+    margin: 10px 500px 10px 10px
+}
+
+#pref-form {
+    background-color: azure;
+}
+
+[type='checkbox'] {
+    margin: 10px 0px 10px 0px;
+}
+
+footer {
+    color: var(--font-color, hotpink);
+}
