@@ -8,23 +8,89 @@
         --font-color: black;
     }
 }
+#navBarTop {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+
+    width: 400px;
+    height: 30px;
+    background-color: honeydew;
+
+    z-index: 2;
+}
+
+#navBar {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+
+    width: 600px;
+    height: 50px;
+    background-color: aquamarine;
+
+    z-index: 1;
+}
 
 h1 {
     color: hotpink !important;
     font-family: 'Lobster', cursive;
+    text-align: center;
+    font-size: 36pt;
+    
 }
 
-.goldText {
-    color: gold;
+h2 {
+    position: relative;
+    top: -15px;
+
+    text-align: center;
+    background-color: rgba(255, 215, 0, 0.5);
+    padding: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 255, 0.5);
+    text-transform: uppercase;
+}
+
+#absSec {
+    position: relative;
+}
+
+#absBox {
+    position: absolute;
+    top: -200px;
+    right: 50px;
+
+    background-color: rgba(255, 0, 255, 0.4);
+    width: 100px;
+    height: 100px;   
+}
+
+.blueText {
+    color: blue;
 }
 
 p {
     font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+    text-align: justify;
+}
+
+a {
+    opacity: 0.7;
+}
+
+a:hover {
+    color: hotpink;
+    opacity: 1;
 }
 
 .wider-image {
+    display: block;
+    margin: auto;
     width: 700px;
     /* height: 125px; */
+    z-index: 3;
 }
 
 .pink-border {
@@ -37,11 +103,31 @@ p {
 .aliceblueBG {
     background-color: aliceblue;
     padding: 10px;
-    margin: 10px 500px 10px 10px
+    margin: 10px 10px 10px 10px;
+
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+#left {
+    float: left;
+    background-color: rgba(255, 255, 0, 0.5);
+    width: 50%;
+    height: 200px;
+}
+
+#right {
+    float: right;
+    background-color: rgba(255, 0, 255, 0.5);
+    width: 50%;
+    height: 200px;
 }
 
 #pref-form {
     background-color: azure;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
 }
 
 [type='checkbox'] {
