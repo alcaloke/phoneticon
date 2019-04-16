@@ -8,6 +8,10 @@
         --font-color: black;
     }
 }
+
+body {
+    /* background: url(https://www.brewsterwallcovering.com/images/thumbs/0004377_pink-texture_600.jpeg) */
+}
 #navBarTop {
     position: fixed;
     top: 10px;
@@ -112,16 +116,46 @@ a:hover {
 
 #left {
     float: left;
-    background-color: rgba(255, 255, 0, 0.5);
-    width: 50%;
-    height: 200px;
+    background-color: hsl(180, 100%, 50%);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#left:hover {
+    transform: scale(2);
 }
 
 #right {
     float: right;
     background-color: rgba(255, 0, 255, 0.5);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    
+    transform: scale(1.5);
+}
+
+#linear-BG {
+    /* position: relative;
+    top: 200px; */
+    margin: auto;
     width: 50%;
     height: 200px;
+    background: linear-gradient(25deg, #CCFFFF, #FFCCCC);
+}
+
+#repeating-lin-BG {
+    margin: auto;
+    width: 50%;
+    height: 200px;
+    background: repeating-linear-gradient(
+        90deg,
+        pink 0px,
+        yellow 60px,
+        blue 120px
+    );
+    transform: skewX(-12deg);
 }
 
 #pref-form {

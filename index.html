@@ -8,13 +8,15 @@
 </head>
 
 <body>
-    <div id="navBar"></div>
-    <div id="navBarTop"></div>
+    <div id="navBar">fixed at top right</div>
+    <div id="navBarTop">fixed at top right & z-index'd on top</div>
     <a href="#"><img class="wider-image pink-border" src="155_Posters.jpg" alt="tasteful aesthetics" width="509"
             height="256"></a>
     <h1>Phoneticon</h1>
     <h2 style="color: blue;">The next generation communication system</h2>
-    <section id="absSec"><div id="absBox"></div></section>
+    <section id="absSec">
+        <div id="absBox">absolute positioning (in a relatively positioned parent)</div>
+    </section>
     <main>
         <p class="blueText">Based on the philosophy of <a class="goldText"
                 href="https://alcaloke.github.io/lovewave.edit/" target="_blank">Lovewave</a> sensibilities, we deliver
@@ -39,8 +41,11 @@
             </ol>
         </div>
 
-        <section id="left"></section>
-        <section id="right"></section>
+        <section id="left">Floating at left; at hover transform scaled x2</section>
+        <section style="font-size: 10pt;" id="right">Floating at right, transform scaled x1.5</section>
+
+        <div id="linear-BG">Linear background test at 35deg</div>
+        <div id="repeating-lin-BG">repeating linear background at 90deg pink -> yellow -> blue. Transform skewX at -12degrees</div>
 
         <form id='pref-form' action="/submit-pref">
             <div>
