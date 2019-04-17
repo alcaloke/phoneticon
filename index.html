@@ -8,64 +8,126 @@
 </head>
 
 <body>
-    <div id="navBar">fixed at top right</div>
-    <div id="navBarTop">fixed at top right & z-index'd on top</div>
-    <a href="#"><img class="wider-image pink-border" src="155_Posters.jpg" alt="tasteful aesthetics" width="509"
-            height="256"></a>
-    <h1>Phoneticon</h1>
-    <h2 style="color: blue;">The next generation communication system</h2>
-    <section id="absSec">
-        <div id="absBox">absolute positioning (in a relatively positioned parent)</div>
-    </section>
-    <main>
-        <p class="blueText">Based on the philosophy of <a class="goldText"
-                href="https://alcaloke.github.io/lovewave.edit/" target="_blank">Lovewave</a> sensibilities, we deliver
-            <a href="#">Phoneticon</a>, the next generation digital messenging system for <u>empathetic
-                communication</u>.
-            If you would like to get in touch, please <a href="#footer">Contact Us</a></p>
+    <header>
+        <div id="navBar">fixed at top right</div>
+        <div id="navBarTop">fixed at top right & z-index'd on top</div>
 
-        <div class="aliceblueBG">
-            <p>Here are the three components of the <strong>messenger aesthetics</strong>:</p>
+        <a href="#"><img class="wider-image pink-border" src="155_Posters.jpg" alt="tasteful aesthetics" width="509"
+                height="256"></a>
+
+        <h1>Phoneticon</h1>
+
+        <h2 style="color: blue;">The next generation communication system</h2>
+
+        <section id="absSec">
+            <div id="absBox">absolute positioning (in a relatively positioned parent)</div>
+        </section>
+
+        <nav>
             <ul>
-                <li><s>colour x sound</s></li>
-                <li>motion x spirit</li>
-                <li>form x harmony</li>
+                <li><a href="#">Main</a></li>
+                <li><a href="#">Lovewave</a></li>
+                <li><a href="#">Phoneticon</a></li>
+                <li><a href="#">Contact</a></li>
             </ul>
-            <hr>
-            <p>Combined, they are: </p>
-            <ol><em>
-                    <li>colound</li>
-                    <li>spirition</li>
-                    <li>formony</li>
-                </em>
-            </ol>
-        </div>
+        </nav>
+    </header>
 
-        <section id="left">Floating at left; at hover transform scaled x2</section>
-        <section style="font-size: 10pt;" id="right">Floating at right, transform scaled x1.5</section>
+    <main>
+        <section id="introduction">
+            <article>
+                <p class="blueText">Based on the philosophy of <a class="goldText"
+                        href="https://alcaloke.github.io/lovewave.edit/" target="_blank">Lovewave</a> sensibilities, we
+                    deliver
+                    <a href="#">Phoneticon</a>, the next generation digital messenging system for <u>empathetic
+                        communication</u>.
+                    If you would like to get in touch, please <a href="#footer" accesskey="c">Contact Us</a> or leave us your email
+                    address, before <time datetime="2019-05-31">31<sup>st</sup> of May 2019</time></p>
 
-        <div id="linear-BG">Linear background test at 35deg</div>
-        <div id="repeating-lin-BG">repeating linear background at 90deg pink -> yellow -> blue. Transform skewX at -12degrees</div>
+                <form>
+                    <label for="email-input">Email:</label>
+                    <input type="text" id="email-input" name="email">
 
-        <form id='pref-form' action="/submit-pref">
-            <div>
-                <label for="colourful"><input type="checkbox" id="colourful" name="aesthetics" checked>colourful</label>
-                <label for="crystal clear"><input type="checkbox" id="crystal clear" name="aesthetics">crystal
-                    clear</label>
-                <label for="interactive"><input type="checkbox" id="interactive" name="aesthetics">interactive</label>
-            </div>
-            <div>
-                <label for="lovewave"><input type="radio" id="lovewave" name="lovewave-phoneticon"
-                        checked>lovewave</label>
-                <label for="phoneticon"><input type="radio" id="phoneticon"
-                        name="lovewave-phoneticon">phoneticon</label>
-            </div>
-            <div>
-                <input required type="text" placeholder="submit your preference">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
+                    <fieldset>
+                        <legend tabindex="0">Please also specify the area of interest from the following options</legend>
+                        <input id="Lovewave" type="radio" name="interest" value="Lovewave">
+                        <label for="Lovewave">Lovewave</label><br>
+                        <input id="Phoneticon" type="radio" name="interest" value="Phoneticon">
+                        <label for="Phoneticon">Phoneticon</label><br>
+                        <input id="Other" type="radio" name="interest" value="Other">
+                        <label for="Other">Other</label>
+                    </fieldset>
+
+                    <input type="button" id="submit-button" name="submit" value="Submit">
+                </form>
+
+                <div class="aliceblueBG">
+                    <p>Here are the three components of the <strong>messenger aesthetics</strong>:</p>
+                    <ul>
+                        <li><s>colour x sound</s></li>
+                        <li>motion x spirit</li>
+                        <li>form x harmony</li>
+                    </ul>
+                    <hr>
+                    <p>Combined, they are: </p>
+                    <ol><em>
+                            <li>colound</li>
+                            <li>spirition</li>
+                            <li>formony</li>
+                        </em>
+                    </ol>
+                </div>
+            </article>
+        </section>
+
+        <section id="CSS graphics">
+            <div id="left">Floating at left; at hover transform scaled x2</div>
+            <div style="font-size: 10pt;" id="right">Floating at right, transform scaled x1.5</div>
+
+            <div id="linear-BG">Linear background test at 35deg</div>
+
+            <figure>
+                <div id="repeating-lin-BG"></div>
+                <figcaption style="text-align: center;">repeating linear background at 90deg pink -> yellow -> blue.
+                    Transform skewX at
+                    -12degrees</figcaption>
+            </figure>
+
+            <div id="animation">Animation using @keyframes</div>
+            <div id="animation2">Animation when hovering using @keyframes</div>
+        </section>
+
+        <section id="form">
+            <form id='pref-form' action="/submit-pref">
+                <div>
+                    <label for="colourful"><input type="checkbox" id="colourful" name="aesthetics"
+                            checked>colourful</label>
+                    <label for="crystal clear"><input type="checkbox" id="crystal clear" name="aesthetics">crystal
+                        clear</label>
+                    <label for="interactive"><input type="checkbox" id="interactive"
+                            name="aesthetics">interactive</label>
+                </div>
+                <div>
+                    <label for="lovewave"><input type="radio" id="lovewave" name="lovewave-phoneticon"
+                            checked>lovewave</label>
+                    <label for="phoneticon"><input type="radio" id="phoneticon"
+                            name="lovewave-phoneticon">phoneticon</label>
+                </div>
+                <div>
+                    <input required type="text" placeholder="submit your preference">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </section>
+
+        <section id="audioPlayer">
+            <audio id="alcaloke" controls>
+                <source src="Trip (D25 - Mix 01).mp3" type="audio/mp3">
+            </audio>
+        </section>
+
     </main>
+
     <footer id="footer">Lovewave Ltd</footer>
 </body>
 

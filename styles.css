@@ -158,6 +158,61 @@ a:hover {
     transform: skewX(-12deg);
 }
 
+#animation {
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-color: red;
+
+    animation-name: colourful;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.1, 0.2, 0.7, 0.5);
+
+    position: relative;
+}
+
+@keyframes colourful{
+    0% {
+        background-color: red;
+        left: 0px;
+    }
+    33% {
+        background-color: yellow;
+        left: 250px;
+        /* opacity: 0.7; */
+    }
+    66% {
+        background-color: orange;
+        left: 125px;
+    }
+    100% {
+        background-color: red;
+        left: 0px;
+    }
+}
+
+#animation2 {
+    margin: auto;
+    width: 250px;
+    height: 250px;
+    background-color: hotpink;
+}
+
+#animation2:hover {
+    animation-name: animation-hover;
+    animation-duration: 300ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animation-hover {
+    100% {
+        background-color: blueviolet;
+    }
+}
+
 #pref-form {
     background-color: azure;
     padding: 10px;
