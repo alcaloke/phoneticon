@@ -48,8 +48,11 @@ h2 {
     position: relative;
     top: -15px;
 
+    margin: auto;
+    width: 50vw;
+
     text-align: center;
-    background-color: rgba(255, 215, 0, 0.5);
+    background-color: rgba(255, 235, 0, 0.7);
     padding: 10px;
     box-shadow: 5px 5px 20px rgba(0, 0, 255, 0.5);
     text-transform: uppercase;
@@ -73,6 +76,11 @@ h2 {
     color: blue;
 }
 
+nav {
+    margin: auto;
+    width: 80vw
+}
+
 p {
     font-size: 18px;
     font-weight: 300;
@@ -92,8 +100,8 @@ a:hover {
 .wider-image {
     display: block;
     margin: auto;
-    width: 700px;
-    /* height: 125px; */
+    max-width: 100%;
+    height: auto;
     z-index: 3;
 }
 
@@ -104,6 +112,11 @@ a:hover {
     border-radius: 10px;
 }
 
+#introduction {
+    margin: auto;
+    width: 80vw;
+}
+
 .aliceblueBG {
     background-color: aliceblue;
     padding: 10px;
@@ -112,6 +125,11 @@ a:hover {
     font-size: 18px;
     font-weight: 300;
     line-height: 25px;
+}
+
+#CSS-graphics {
+    margin: auto;
+    width: 70vmax;
 }
 
 #left {
@@ -211,6 +229,64 @@ a:hover {
     100% {
         background-color: blueviolet;
     }
+}
+
+#flex {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+
+    margin: auto;
+    width: 80vw;
+    height: 50vh;
+}
+
+#flexbox1 {
+    width: 30vw;
+    height: 30vh;
+
+    /* flex-shrink: 1; */
+
+    background-color: pink;
+}
+
+#flexbox2 {
+    width: 25vw;
+    height: 25vh;
+
+    /* flex-shrink: 10; */
+
+    background-color: aquamarine;
+}
+
+#flex2 {
+    display: flex;
+    justify-content: center;
+
+    margin: auto;
+    width: 80vw;
+    height: 50vh;
+}
+
+#flexbox3 {
+    order: 2;
+    flex: 2 2 150px;
+    align-self: flex-start;
+
+    height: 30vh;
+
+    background-color: pink;
+}
+
+#flexbox4 {
+    order: 1;
+    flex: 1 1 150px;
+    align-self: flex-end;
+
+    height: 25vh;
+
+    background-color: aquamarine;
 }
 
 #pref-form {
