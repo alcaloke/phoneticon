@@ -289,6 +289,61 @@ a:hover {
     background-color: aquamarine;
 }
 
+
+#grid-container {
+    margin: auto;
+
+    width: 60%;
+    height: 300px;
+    font-size: 28pt;
+
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-column-gap: 10px;
+    grid-row-gap: 10px; */
+    grid-gap: 5px 10px;
+
+    justify-items: stretch;
+    align-items: stretch;
+
+    grid-template-areas:
+    "header header header"
+    "content content advert"
+    "footer footer footer";    
+}
+
+#item1 {
+    background: coral;
+}
+
+#item2 {
+    background: cornsilk;
+    /* justify-self: center; */
+    grid-area: 1/2/3/3;
+}
+
+#item3 {
+    background: magenta;
+}
+
+#item4 {
+    background: darkorange;
+    /* align-self: end; */
+    grid-area: advert;
+}
+
+#item5 {
+    background: darksalmon;
+    /* grid-column: 2 / 4;
+    grid-row: 2 / 4; */
+}
+
+#item6 {
+    background: darkslateblue;
+    grid-area: footer;
+}
+
 #pref-form {
     background-color: azure;
     padding: 10px;
