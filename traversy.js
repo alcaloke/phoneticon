@@ -1,3 +1,6 @@
+/* JavaScript Crash Course For Beginners */
+
+
 // alert('Hello')
  const x = 5;
 const name = 'Yong';
@@ -86,4 +89,113 @@ if(y === 27) {
     // console.log('y is 27')
 } else {
     // console.log('y is not data type number 27')
+}
+
+/* Arrow function */
+
+// example 1
+const multiplyBy2 = (num) => {
+    return num * 2;
+};
+// console.log(multiplyBy2(5));
+
+// example 2
+const multiply = (num1, num2) => num1 * num2;
+// console.log(multiply(3, 9));
+
+// example 3
+const multiplyBy10 = num => num * 10;
+// console.log(multiplyBy10(10));
+
+/* Object oriented programming 
+1. with function */
+
+// constructor function
+function Person(firstName, lastName, dob) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.dob = new Date(dob);
+
+    this.getFullName = function() {
+        return `Full name: ${this.firstName} ${lastName}`;
+    }
+}
+
+Person.prototype.getBirthYear = function() {
+        return this.dob.getFullYear();
+}
+
+//instantiate object
+const person1 = new Person('Yong', 'Shin', '5-31-1985');
+const p1birthYr = person1.getBirthYear();
+const p1FullName = person1.getFullName();
+// console.log(p1birthYr);
+
+/* Object oriented programming 
+2. with class */
+
+class Human {
+    constructor(firstName, lastName, dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+    }
+
+    getBirthYear() {
+        return this.dob.getFullYear();
+    }
+
+    getFullName() {
+        return `Full name: ${this.firstName} ${lastName}`;
+    }
+}
+
+const person2 = new Human('Yong', 'Shin', '5-31-1985');
+// console.log(person2);
+
+/* DOM */
+// console.log(window);
+
+// Single element
+const emailIn = document.getElementById('email-input');
+const querySelect = document.querySelector('header')
+// console.log(querySelect);
+
+// Multiple element
+const allLi = (document.querySelectorAll('li'));
+// console.log(allLi);
+// console.log(document.getElementsByClassName('blueText'));
+// console.log(document.getElementsByTagName('li'));
+const anchors = document.querySelectorAll('a');
+// anchors.forEach( (anchor) => console.log(anchor));
+
+const li = document.querySelector('li');
+// ul.remove();
+li.firstElementChild.textContent = "formony";
+
+const textCol = document.querySelector('.blueText');
+// textCol.style.color = 'pink';
+
+/* Events */
+const btn = document.querySelector('#submit-button');
+btn.addEventListener('click', (e) => {
+    // e.preventDefault();
+    // console.log(e.target);
+    // document.querySelector('h2').style.background = 'pink';
+});
+
+/* Form Script */
+const emailForm = document.querySelector('form');
+const emailInput = document.querySelector('#email-input');
+
+emailForm.addEventListener('submit', onSubmit);
+
+function onSubmit(e) {
+    e.preventDefault();
+
+    if(emailInput.value === '') {
+        alert('Please enter fields');
+    } else {
+        console.log('great!')
+    }
 }
